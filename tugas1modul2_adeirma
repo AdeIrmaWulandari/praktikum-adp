@@ -1,0 +1,79 @@
+print("SELAMAT DATANG DI BANDARA INTERNASIONAL MINANGKAN")
+print("List Tiket Penerbangan Pesawat di Bandara Internasional Minangkabau")
+print("=======================================================================================")
+print("|Kode Penerbangan | Tujuan Maskapai | Kelas Ekonomi | Kelas Bisnis | Kelas First Kelas|")
+print("-======================================================================================")
+print("|3012             | Padang-Jakarta  | Rp.800.000    | Rp.850.000   | Rp.900.000       |")
+print("|4015             | Padang-Batam    | Rp.500.000    | Rp.550.000   | Rp.700.000       |")
+print("|4050             | Padang-Bandung  | Rp.700.000    | Rp.750.000   | Rp.850.000       |")
+print("=======================================================================================")
+
+nama = input("Masukan Nama Pembeli Tiket: ")
+umur = input("Masukan Umur Pembeli Tiket: ")
+jenis_kelamin = input("Masukan Jenis Kelamin Pembeli Tiket (P/L): ")
+kode_penerbangan = input("Masukan kode penerbangan: ")
+if kode_penerbangan == "3012" :
+  harga_ekonomi = 800000
+  harga_bisnis = 850000
+  harga_first = 900000
+  tujuan_maskapai = "Padang-Jakarta"
+  print("tujuan_maskapai: ",tujuan_maskapai)
+elif kode_penerbangan == "4015" :
+   harga_ekonomi = 50000
+   harga_bisnis = 550000
+   harga_first = 700000
+   tujuan_maskapai = "Padang-Batam"
+   print("tujuan_maskapai: ",tujuan_maskapai)
+elif kode_penerbangan == "4050" :
+   harga_ekonomi = 700000
+   harga_bisnis = 750000
+   harga_first = 850000
+   tujuan_maskapai = "Padang-Bandung"
+   print("tujuan_maskapai: ",tujuan_maskapai)
+else :
+    print("pilihan tujuan tidak tersedia")
+
+print("jenis kelas")
+print("1. ekonomi", (kode_penerbangan))
+print("2. bisnis", (kode_penerbangan))
+print("3. first", (kode_penerbangan))
+
+kelas = int(input("Masukan pilihan kelas (1/2/3): "))
+
+if kelas == 1:
+   jenis_kelas = "ekonomi"
+   harga = harga_ekonomi
+   
+elif kelas ==  2:
+    jenis_kelas = "bisnis"
+    harga = harga_bisnis
+    
+elif kelas == 3:
+    jenis_kelas = "first"
+    harga = harga_first
+    
+else :
+    print("tidak ada kelas yang tersedia")
+
+jumlah_kursi = int(input("Masukan jumlah kursi: "))
+
+if jumlah_kursi > 3:
+    total = harga * jumlah_kursi
+    diskon = total * 0.2
+    total_pembayaran = int(total - diskon)
+    print("total harga yang harus anda bayar adalah ", total_pembayaran)
+else:
+    total_pembayaran = harga * jumlah_kursi
+    print("total harga yang harus anda bayar adalah ", total_pembayaran )
+
+print("============================STRUK PEMESANAN TIKET PESAWAT============================")
+print("nama                              :", nama)
+print("umur                              :", umur)
+print("jenis kelamin                     :", jenis_kelamin)
+print("-------------------------------------------------------------------------------------")
+print("kode penerbangan                  :", kode_penerbangan)
+print("jenis kelas                       :", jenis_kelas)
+print("tujuan                            :", tujuan_maskapai)
+print("jumlah kursi                      :",jumlah_kursi )
+print("total pembayaran                  :", total_pembayaran)
+print("=====================================================================================")
